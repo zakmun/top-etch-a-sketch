@@ -1,1 +1,1 @@
-# top-etch-a-sketch
+The oding project - browser version of Etch-A-Sketch
