@@ -22,7 +22,7 @@ function createGrid (grid) {
     container.appendChild(squares);
 
     squares.addEventListener('mouseover', () => {
-        squares.style.backgroundColor  ='pink'
+        squares.style.backgroundColor = 'pink'
     })
 
     }
@@ -33,3 +33,6 @@ function createGrid (grid) {
 createGrid(16)
 
     
+btn.addEventListener('click', () => {
+    prompt('What size do you want your grid to be?')
+})
