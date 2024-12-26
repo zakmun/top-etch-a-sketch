@@ -3,11 +3,11 @@ const container = document.querySelector('.container');
 
 
 
-function createGrid (numberPerRow) {
+function createGrid (grid) {
 
     
-    const total = (numberPerRow * numberPerRow) + numberPerRow;
-    const mod = numberPerRow + 1;
+    const total = (grid * grid) + grid;
+    const mod = grid + 1;
 
     for (let i = 0; i <= total; i++) {
     
@@ -21,8 +21,15 @@ function createGrid (numberPerRow) {
           }
     container.appendChild(squares);
 
+    squares.addEventListener('mouseover', () => {
+        squares.style.backgroundColor ='black'
+    })
+
     }
+
     
 }
 
 createGrid(16)
+
+    
