@@ -1,5 +1,5 @@
 const container = document.querySelector('.container');
-
+const btn = document.querySelector('button')
 
 
 
@@ -22,7 +22,7 @@ function createGrid (grid) {
     container.appendChild(squares);
 
     squares.addEventListener('mouseover', () => {
-        squares.style.backgroundColor ='black'
+        squares.style.backgroundColor  ='pink'
     })
 
     }
