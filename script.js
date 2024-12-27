@@ -1,5 +1,6 @@
 const container = document.querySelector('.container');
 const btn = document.querySelector('button')
+const randBtn = document.querySelector('button')
 
 
 function createGrid (gridSize) {
@@ -17,10 +18,21 @@ function createGrid (gridSize) {
     container.appendChild(squares);
 
     squares.addEventListener('mouseover', () => {
-      squares.style.backgroundColor = 'pink'
+    squares.style.backgroundColor = 'rgb(0 0 0 / 10%)';
+    squares.style.backgroundColor = randBtn;
+
+
+    randBtn.addEventListener('click', () => {
+      const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+      console.log(randomColor);
+
+      });
+    
+      
     })
 
-  }
+   
+}
 }
 
 
@@ -32,7 +44,7 @@ function userGridChoice () {
   btn.addEventListener('click', () => {
     let gridPrompt = prompt('What size do you want your grid to be?')
     const gridSize = Number(gridPrompt)
-    if (isNaN(gridSize) || gridSize >= 100) {
+    if (isNaN(gridSize) || gridSize >= 100 || gridSize == "") {
       alert('Please enter a valid number less than 100')
     } else {
       createGrid(gridSize)
@@ -40,7 +52,10 @@ function userGridChoice () {
 
 })
   
+
 }
+
+
 
 
 userGridChoice()
