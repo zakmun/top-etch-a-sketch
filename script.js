@@ -4,6 +4,7 @@ const btn = document.querySelector('button')
 
 function createGrid (gridSize) {
 
+  container.innerHTML= ""
   
   const squareSize = container.offsetWidth / gridSize;
 
@@ -26,6 +27,8 @@ function createGrid (gridSize) {
 
 function userGridChoice () {
 
+  createGrid(16)
+  
   btn.addEventListener('click', () => {
     let gridPrompt = prompt('What size do you want your grid to be?')
     const gridSize = Number(gridPrompt)
@@ -38,5 +41,6 @@ function userGridChoice () {
 })
   
 }
+
 
 userGridChoice()
