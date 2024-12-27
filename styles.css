@@ -22,7 +22,10 @@ button {
     justify-content: center;
     margin: 0 auto;
     flex-wrap: wrap;
-    width: 960px;
+    width: 500px;
 }
 
+.squares {
+    border: 1px solid black;
+}
 
