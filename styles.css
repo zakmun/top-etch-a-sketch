@@ -10,10 +10,17 @@ h1 {
 }
 
 button {
-    margin: 10px 0;
+    margin:10px auto;
+    display:block;    
     width: 120px;
     height: 40px;
     border-radius: 5px;
+
+}
+
+button:hover {
+    background-color: lightgray;
+    cursor: pointer;
 }
 
 .container {
