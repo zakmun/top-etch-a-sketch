@@ -1,6 +1,7 @@
 const container = document.querySelector('.container');
 const btn = document.querySelector('button')
 const randBtn = document.querySelector('.rand')
+const reset = document.querySelector('.reset')
 
 let useRandomColors = false;
 
@@ -42,6 +43,11 @@ function randomColor() {
 randBtn.addEventListener('click', () => {
   useRandomColors = !useRandomColors;
 });
+
+reset.addEventListener('click', () => {
+  container.innerHTML = ""
+  createGrid(16); 
+})
 
 
 function userGridChoice () {
