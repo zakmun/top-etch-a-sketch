@@ -33,6 +33,17 @@ function createGrid (gridSize) {
 }
 }
 
+function randomColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+
+
+}
+
+randBtn.addEventListener('click', () => {
+  useRandomColors = !useRandomColors;
+});
+
+
 function userGridChoice () {
 
   createGrid(16)
@@ -53,12 +64,3 @@ function userGridChoice () {
 
 userGridChoice()
 
-function randomColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-
-
-}
-
-randBtn.addEventListener('click', () => {
-  useRandomColors = !useRandomColors;
-});
