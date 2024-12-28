@@ -25,7 +25,6 @@ function createGrid (gridSize) {
         squares.style.backgroundColor = randomColor()
       } else {
         squares.style.backgroundColor = 'rgb(0 0 0 / 10%)';
-
       }
         
     })
