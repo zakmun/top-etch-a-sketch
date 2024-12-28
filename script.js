@@ -1,7 +1,8 @@
 const container = document.querySelector('.container');
 const btn = document.querySelector('button')
-const randBtn = document.querySelector('button')
+const randBtn = document.querySelector('.rand')
 
+let useRandomColors = false;
 
 function createGrid (gridSize) {
 
@@ -18,24 +19,19 @@ function createGrid (gridSize) {
     container.appendChild(squares);
 
     squares.addEventListener('mouseover', () => {
-    squares.style.backgroundColor = 'rgb(0 0 0 / 10%)';
-    squares.style.backgroundColor = randBtn;
 
+      if(useRandomColors) {
+        squares.style.backgroundColor = randomColor()
+      } else {
+        squares.style.backgroundColor = 'rgb(0 0 0 / 10%)';
 
-    randBtn.addEventListener('click', () => {
-      const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-      console.log(randomColor);
-
-      });
-    
-      
+      }
+        
     })
 
    
 }
 }
-
-
 
 function userGridChoice () {
 
@@ -55,7 +51,14 @@ function userGridChoice () {
 
 }
 
-
-
-
 userGridChoice()
+
+function randomColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+
+
+}
+
+randBtn.addEventListener('click', () => {
+  useRandomColors = !useRandomColors;
+});
